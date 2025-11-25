@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build MPI",
+            "type": "shell",
+            "command": "cl",
+            "args": [
+                "dynamicMPI.c",
+                "/I", "C:\\Program Files (x86)\\Microsoft SDKs\\MPI\\Include",
+                "/link",
+                "/LIBPATH:C:\\Program Files (x86)\\Microsoft SDKs\\MPI\\Lib\\x64",
+                "msmpi.lib"
+            ],
+            "problemMatcher": ["$msCompile"],
+            "group": { "kind": "build", "isDefault": true }
+        }
+    ]
+}
